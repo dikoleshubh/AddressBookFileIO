@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\TDD-Cab Invoice\bin\Debug\TDD-Cab Invoice.exe.config
+C:\Users\Admin\source\repos\TDD-Cab Invoice\bin\Debug\TDD-Cab Invoice.exe
+C:\Users\Admin\source\repos\TDD-Cab Invoice\bin\Debug\TDD-Cab Invoice.pdb
+C:\Users\Admin\source\repos\TDD-Cab Invoice\obj\Debug\TDD-Cab Invoice.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\TDD-Cab Invoice\obj\Debug\TDD-Cab Invoice.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\TDD-Cab Invoice\obj\Debug\TDD-Cab Invoice.exe
+C:\Users\Admin\source\repos\TDD-Cab Invoice\obj\Debug\TDD-Cab Invoice.pdb
