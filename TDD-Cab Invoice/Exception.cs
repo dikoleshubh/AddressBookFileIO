@@ -8,7 +8,19 @@ namespace TDD_Cab_Invoice
 {
     public class CabInvoiceException : Exception
     {
-        // Enum for defining different type of custom exception       
+        // Enum for defining different type of custom exception
+        /// Enum of exception type.
+        public enum ExceptionType
+        {
+            INVALID_RIDE_TYPE,
+            INVALID_DISTANCE,
+            INVALID_TIME,
+            INVALID_RIDES,
+            NULL_RIDES,
+            INVALID_USER_ID
+        }
+        /// creating type variable of type ExceptionType
+
         public ExceptionType type;
 
         // Initializes a new instance of the class.
@@ -17,9 +29,6 @@ namespace TDD_Cab_Invoice
         {
             this.type = type;
         }
-        public enum ExceptionType
-        {
-            INVALID_DISTANCE, INVALID_TIME, NULL_RIDES, INVALID_USER_ID
-        }
+
     }
 }
