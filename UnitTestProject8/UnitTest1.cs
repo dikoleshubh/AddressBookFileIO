@@ -4,23 +4,20 @@ using TDD_Cab_Invoice;
 
 namespace UnitTestProject8
 {
-
     [TestClass]
-    /// <summary>
-    /// Adding class to do tests for program
-    /// </summary>
     public class Tests
     {
-        /// <summary>
-        /// Givens the multiple rides should return invoice summary with average fare.  UC3
-        /// </summary>
+
         [TestMethod]
-        public void GivenMultipleRidesShouldReturnInvoiceSummarywithAverageFare()
+        public void SummaryTest()
         {
             //Creating instance of invoice generator 
             InvoiceGenerator invoiceGenerator = new InvoiceGenerator(RideType.NORMAL);
             Ride[] rides = { new Ride(2.0, 5), new Ride(0.1, 1) };
-
+            RideRepository rideRepository = new RideRepository();
+            string userId = "Dhiraj";
+            rideRepository.AddRide(userId, rides);
+            Ride[] rideData = rideRepository.GetRides(userId);
             //Generating Summary for rides
             InvoiceSummary summary = invoiceGenerator.CalculateFare(rides);
             InvoiceSummary expectedSummary = new InvoiceSummary(2, 30.0, 15);
