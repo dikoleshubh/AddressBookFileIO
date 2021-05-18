@@ -10,7 +10,7 @@ namespace TDD_Cab_Invoice
     {
 
         //Create Variables 
-        //Create Constants
+
         RideType rideType;
         private RideRepository rideRepository;
         private double averageFarePerRide;
@@ -101,7 +101,7 @@ namespace TDD_Cab_Invoice
         }
 
         // Adds the rides in dictionary with key as a user id 
-        //Adding Method
+        // Method to Add Rides For UserId
         public void AddRides(string userId, Ride[] rides)
         {
             try
