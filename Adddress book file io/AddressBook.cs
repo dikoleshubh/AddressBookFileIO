@@ -8,6 +8,7 @@ namespace Adddress_book_file_io
 {
     class AddressBook
     {
+
         List<Person> adressBookList;//create list
         public AddressBook()//default constructor
         {
@@ -21,8 +22,6 @@ namespace Adddress_book_file_io
                 Person person = new Person(firstName, lastName, city, state, email, phoneNumber, zip);//create new object of person class
                 adressBookList.Add(person);//adding person details in addressbookList 
                 Console.WriteLine("Contact added Successfully");
-                Console.WriteLine();
-                Console.WriteLine("New contact");
             }
             else
             {
@@ -34,7 +33,7 @@ namespace Adddress_book_file_io
             Console.WriteLine("\nEntered Person Details is:");
             foreach (var person in adressBookList)
             {
-                Console.WriteLine("FirstName: {0}, LastName: {1}, city: {2}, state: {3}, email: {4}, phoneNumber: {5}, Zip:{6}", person.firstName, person.lastName, person.city, person.state, person.email, person.phoneNumber, person.zip);
+                Console.WriteLine("FirstName: {0}, LastName: {1}, city: {2}, state: {3}, email: {4}, phoneNumber: {5}", person.firstName, person.lastName, person.city, person.state, person.email, person.phoneNumber);
             }
         }
 
@@ -43,7 +42,7 @@ namespace Adddress_book_file_io
             Console.WriteLine("\nEntered Person Details is in Order :");
             foreach (var person in adressBookList.OrderBy(Key => Key.firstName))//orderBy sorts the vlues of collection in ascending or decending order
             {
-                Console.WriteLine("FirstName: {0}, LastName: {1}, city: {2}, state: {3}, email: {4}, phoneNumber: {5}, Zip:{6}", person.firstName, person.lastName, person.city, person.state, person.email, person.phoneNumber, person.zip);
+                Console.WriteLine("FirstName: {0}, LastName: {1}, city: {2}, state: {3}, email: {4}, phoneNumber: {5}", person.firstName, person.lastName, person.city, person.state, person.email, person.phoneNumber);
             }
         }
         public void displayPersonInOrderByCity()
@@ -117,9 +116,6 @@ namespace Adddress_book_file_io
             }
             Console.WriteLine("This {0} persons are in same state {1} \t {2} ", count2, state, city);
         }
-
-        
-
         public void editPerson()
         {
             Console.WriteLine("\n enter First name to edit details:");
@@ -179,5 +175,4 @@ namespace Adddress_book_file_io
             adressBookList.RemoveAll(item => item.firstName == firstName && item.lastName == lastName);
         }
     }
-}
 }
