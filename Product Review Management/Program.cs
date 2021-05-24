@@ -7,8 +7,8 @@ namespace Product_Review_Management
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("**********Welcome To Product Review Management********");
-            //UC1
+            Console.WriteLine("Welcome To Product Review Management");
+            
             //Creating a List of ProductReview and Adding values into List.
             List<ProductReview> productReviewlist = new List<ProductReview>()
             {
