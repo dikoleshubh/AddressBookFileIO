@@ -12,7 +12,7 @@ namespace Address_Book_File_IO
     class FileReader
     {
         static String FilePath = @"C:\Users\Admin\source\repos\Address Book File IO\Address\Address.txt";
-        static String FilePathCsv = @"C:\Users\Admin\source\repos\Address Book File IO\Address\AddressCSv.csv;";
+        static String FilePathCsv = @"C:\Users\Admin\source\repos\Address Book File IO\Address1csv.csv";
         public static void WriteTxtFile(List<Person> persons)
         {
             if (File.Exists(FilePath))
