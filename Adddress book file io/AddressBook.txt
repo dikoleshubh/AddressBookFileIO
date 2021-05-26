@@ -1,9 +1,0 @@
-  
-Persons detail 
-FirstName: Arya
-LastName:Stark
-City    : North
-Email   : none
-State   : Kings landing
-PhoneNum: 242223138
- 
