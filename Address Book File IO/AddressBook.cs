@@ -140,7 +140,15 @@ namespace Address_Book_File_IO
         {
             FileReader.ReadContactsInCSVFile();
         }
+        public void WriteContactsInJSONFile()
+        {
+            FileReader.WriteContactsInJSONFile(adressBookList);
+        }
 
+        public void ReadContactsFronJSON()
+        {
+            FileReader.ReadContactsFromJSONFile();
+        }
         public void editPerson()
         {
             Console.WriteLine("\n enter First name to edit details:");

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using CsvHelper;
 using System.Globalization;
+using Newtonsoft.Json;
 
 namespace Address_Book_File_IO
 {
@@ -13,6 +14,7 @@ namespace Address_Book_File_IO
     {
         static String FilePath = @"C:\Users\Admin\source\repos\Address Book File IO\Address\Address.txt";
         static String FilePathCsv = @"C:\Users\Admin\source\repos\Address Book File IO\Address1csv.csv";
+        static String FilePathjson = @"C:\Users\Admin\source\repos\Address Book File IO\TextFile.json";
         public static void WriteTxtFile(List<Person> persons)
         {
             if (File.Exists(FilePath))
@@ -84,6 +86,39 @@ namespace Address_Book_File_IO
                     {
                         Console.WriteLine(CSValues);
                     }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No such file exists");
+            }
+        }
+        public static void WriteContactsInJSONFile(List<Person> contacts)
+        {
+            if (File.Exists(FilePathjson))
+            {
+                JsonSerializer jsonSerializer = new JsonSerializer();
+                using (StreamWriter streamWriter = new StreamWriter(FilePathjson))
+                using (JsonWriter writer = new JsonTextWriter(streamWriter))
+                {
+                    jsonSerializer.Serialize(writer, contacts);
+                }
+                Console.WriteLine("Writting Contacts to the JSON file");
+            }
+            else
+            {
+                Console.WriteLine("No such file exists");
+            }
+        }
+
+        public static void ReadContactsFromJSONFile()
+        {
+            if (File.Exists(FilePathjson))
+            {
+                IList<Person> contactsRead = JsonConvert.DeserializeObject<IList<Person>>(File.ReadAllText(FilePathjson));
+                foreach (Person contact in contactsRead)
+                {
+                    Console.Write(contact.ToString());
                 }
             }
             else
