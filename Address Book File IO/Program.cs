@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace Address_Book_File_IO
 {
     class Program
-    { FileReadWrite.ReadContactsInCSVFile();
+    { 
+        
+            FileReadWrite.ReadContactsInCSVFile();
            // AddressBook obj = new AddressBook();//create object of AddressBook class
 
 
@@ -295,7 +297,7 @@ namespace Address_Book_File_IO
                 addressBook.AddContact(firstName, lastName, address, city, state, phoneNumber, email,zip);
             }
 
-        }
-    }
+        
+    
     }
 }
